@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Les incompris</title>
+  <meta name="description" content="TP attraper et explorer | 2ème année DN MADe Numérique spécialité Graphisme">
+  <meta name="author" content="Guigonnat Cyprien">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/css.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/cursor.png">
+
+</head>
+
+
+<body>
+
+  <div class="map">
+    <div class="inner">
+      <!-- Objets à trouver -->
+      <div class="hotspot" id="hotspot1"></div>
+      <div class="hotspot" id="hotspot2"></div>
+      <div class="hotspot" id="hotspot3"></div>
+      <div class="hotspot" id="hotspot4"></div>
+      <div class="hotspot" id="hotspot5"></div>
+      <div class="hotspot" id="hotspot6"></div>
+      <div class="hotspot" id="hotspot7"></div>
+      <div class="hotspot" id="hotspot8"></div>
+      <div class="hotspot" id="hotspot9"></div>
+      <div class="hotspot" id="hotspot10"></div>
+      <!-- GIF -->     	
+      <div id="nuages1"></div>
+      <div id="nuages2"></div>
+      <div id="nuages3"></div>
+      <div id="pub1"></div>
+  	  <div id="pub2"></div>
+  	  <div id="feux1"></div>
+  	  <div id="feux2"></div>
+  	  <div id="feux3"></div>
+  	  
+    </div>
+  </div>
+
+  <!-- Partie gagner -->
+  <div class="gagner">
+  	Bien joué !<br>Vous avez trouvé tous les éléments<br>de la carte. Ils ne sont désormais<br>plus méconnus pour vous.<br><br>
+  	<a class="bouton" onclick="document.location.reload();">Rejouer pour le fun :)</a>
+  </div>
+  <div class="gagner-fond"></div> 
+
+ <!-- Conteur --> 
+  <div class="count">
+    <span id="count_found">0</span> / 9
+  </div>
+  <!-- Titre -->
+  <div class="titre">Les incompris</div>
+  
+  <!-- Information -->
+  <div class="menu">  	
+  	<div class="menu-responsive"></div>
+	<div class="menu-info">Information</div>
+	<!-- Contenus -->
+	<div class="menu-content">
+		<div>Bonjour, vous devez trouver les éléments ci-dessous sur la carte pour gagner :)</div>
+		<h2></h2>
+		<div class="menu-content-top">
+
+		    <div class="menu-item" data-hotspot="hotspot1">
+		      <div class="item-not-found">Oiseau</div>
+		      <div class="item-found" id="img1"></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot2">
+		      <div class="item-not-found">Rat</div>
+		      <div class="item-found" id="img2"></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot3">
+		      <div class="item-not-found">Pavé</div>
+		      <div class="item-found" id="img3"></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot5">
+		      <div class="item-not-found">Portable</div>
+		      <div class="item-found" id="img5"></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot6">
+		      <div class="item-not-found">Pot de fleurs</div>
+		      <div class="item-found" id="img6"></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot7">
+		      <div class="item-not-found">Béret</div>
+		      <div class="item-found" id="img7"></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot8">
+		      <div class="item-not-found">Baguette</div>
+		      <div class="item-found" id="img8"></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot9">
+		      <div class="item-not-found">Parapluie</div>
+		      <div class="item-found" id="img9"></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot10">
+		      <div class="item-not-found">Masque</div>
+		      <div class="item-found" id="img10"></div>
+		    </div>
+
+		</div>
+		<h2></h2>
+		<div class="menu-content-bottom">
+
+			<div class="debut">Description...</div>
+			<div></div>
+		  	<div class="menu-item" data-hotspot="hotspot1">	     
+		      <div class="item-found">Vous avez trouvé l'oiseau!<br><br>“Et il vaut mieux être oiseau des champs que oiseau de cage.”<br><em>Proverbe Français</em></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot2">	     
+		      <div class="item-found">Vous avez trouvé le rat!<br><br>“Même les plus petits peuvent cacher leur jeu.”<br><em>Proverbe vicieux</em></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot3">	     
+		      <div class="item-found">Vous avez trouvé le pavé!<br><br>“Le plus excellent symbole du peuple, c'est le pavé. On marche dessus jusqu'à ce qu'il vous tombe sur la tête.”<br><em>Victor Hugo</em></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot5">
+		      <div class="item-found">Vous avez trouvé le portable!<br><br>“Le véritable courage est un numéro de téléphone qui connecte l'homme courageux à sa destinée.”<br><em>Claude-may Waia Némia</em></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot6">
+		      <div class="item-found">Vous avez trouvé le pot de fleurs!<br><br>“Une fleur invente la perfection du monde.”<br><em>Fernand Verhesen</em></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot7">
+		      <div class="item-found">Vous avez trouvé le béret!<br><br>“La casquette, c'est bon pour les ouvriers, le chapeau, c'est pas pratique, tandis que le béret, c'est simple, c'est chic, c'est coquet !”<br><em>Pierre Prévet</em></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot8">
+		      <div class="item-found">Vous avez trouvé la baguette!<br><br>“L'espérance est la baguette du pauvre.”<br><em>Proverbe Français</em></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot9">
+		      <div class="item-found">Vous avez trouvé le parapluie!<br><br>“Faites votre mieux. Ensuite, ouvrez votre vieux parapluie et promenez-vous tranquillement sous l'averse des critiques qui ne pourront plus vous atteindre.”<br><em>Dale Carnegie</em></div>
+		    </div>
+		    <div class="menu-item" data-hotspot="hotspot10">
+		      <div class="item-found">Vous avez trouvé le masque!<br><br>“La vraie liberté est celle du masque. Celui qui nous colle à la peau symbolise la plus dure des nécessités : n'être que soi-même.”<br><em>Georges Picard</em></div>
+		    </div>
+
+		</div>
+	</div>
+	<!-- Notification -->
+	<div class="close"></div>
+  </div>
+
+
+  <!-- Jquery -->
+  <script src="js/jquery.js"></script>
+  <script src="js/scrollbooster.min.js"></script>
+
+  <script type="text/javascript">
+	let count_found = 0;
+
+    $(function() {
+
+      $('.hotspot').not('.found').one('click', function(){
+        count_found++;
+        $(this).addClass('found');
+        $('.debut').hide();
+
+        let id = $(this).attr('id');
+        $(".menu-content-bottom .menu-item").removeClass("found")
+        $('.menu-item[data-hotspot="'+id+'"]').addClass('found');
+        $('.close').addClass('show');
+
+        $('#count_found').text(count_found);
+
+        if (count_found == 9){
+        	$('.gagner').fadeIn();
+        	$('.gagner-fond').fadeIn();
+        	$(".gagner").animate({opacity:0},500,"linear",function(){
+        		$(this).animate({opacity:1},500);
+        	});
+        }
+
+      });
+
+      //Cliquer sur un élément dans l'information
+      	$(document).on("click", ".menu-content-top .menu-item.found", function(){
+      	let id = $(this).data("hotspot");
+        $(".menu-content-bottom .menu-item").removeClass("found")
+        $('.menu-item[data-hotspot="'+id+'"]').addClass('found');
+      })
+
+
+      // SlideToggle de l'information
+      $(".menu-info").on("click", function(){
+      	$(".menu-content").slideToggle()
+      	$('.close').removeClass('show');
+      })  
+
+      $(".menu-responsive").on("click", function(){
+      	$(".menu-content").slideToggle()
+      	$('.close').removeClass('show');
+      })    
+      	
+   
+
+
+      $(document).ready(function(){
+      	$('.chargement').fadeOut();
+      })
+
+      //document.getElementById("showImage").onclick = function() {
+      	//document.getElementById("pub1").style.visibility = "visible";
+      //}
+
+
+      var scrollElScroll = document.querySelector(".map .inner");
+
+      var scr = new ScrollBooster({
+        viewport: document.querySelector(".map"),
+        emulateScroll: true,
+        bounce: false, // Pour éviter l'effet élastique
+        // friction: 0.2, // Pour régler la friction du déplacement
+        onUpdate: function(data) {
+          scrollElScroll.style.transform =
+            "translate(" + -data.position.x + "px, " + -data.position.y + "px)";
+        },
+      });
+
+      
+      scr.setPosition({
+        x: 1300,
+        y: 580
+      });
+      
+    });
+  </script>
+</body>
+</html>

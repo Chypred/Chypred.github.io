@@ -1,0 +1,541 @@
+@font-face {
+    font-family: 'vcr_osd_monoregular';
+    src: url('vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+         url('vcr_osd_mono_1.001-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {box-sizing: border-box}
+
+html, body {
+  font-family: vcr_osd_monoregular;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  overscroll-behavior-x: none;
+  cursor:url(../images/cursor.svg), auto;
+}
+
+.map {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.inner {
+  position: relative;
+  width: 4098px;
+  height: 3072px;
+  background: url(../images/manif.png) no-repeat center center / 100% auto;
+}
+
+.gagner {
+  position: fixed;
+  display: none;
+  top: 100px;
+  left: 20px;
+  padding:10px 20px;
+  font-size: 18px;
+  pointer-events: auto !important;
+  z-index: 999999;
+}
+.gagner-fond {
+  position: absolute;
+  display: none;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  pointer-events: none;
+  background-color: white;
+  opacity: 0.5;
+}
+
+
+.bouton {
+  text-decoration: underline;
+}
+.bouton:hover {
+  text-decoration: underline;  
+  cursor:url(../images/cursor-hover.svg), auto;
+}
+.bouton:active {
+  cursor:url(../images/cursor.svg), auto;
+}
+
+
+/* Les hotspot */
+.hotspot {
+  position: absolute;
+}
+
+/* oiseau */
+#hotspot1 {
+  top: 815px;
+  left: 1005px;
+  width: 50px;
+  height: 30px;
+  padding: 10px;
+  opacity: 0.8;
+  border-radius: 8px;
+}
+#img1 {
+  background-image: url(../images/oiseau.png);
+}
+
+/* rat */
+#hotspot2 {
+  top: 505px;
+  left: 1950px;
+  width: 50px;
+  height: 25px;
+  padding: 10px;
+  opacity: 0.8;
+  border-radius: 8px;
+}
+#img2 {
+  background-image: url(../images/rat.png);
+}
+/* pavé */
+#hotspot3 {
+  top: 1328px;
+  left: 1850px;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  opacity: 0.8;
+  border-radius: 8px;
+  text-align: center;
+}
+#img3 {
+  background-image: url(../images/pavé.png);
+}
+
+/* portable */
+#hotspot5 {
+  top: 1990px;
+  left: 3825px;
+  width: 70px;
+  height: 140px;
+  padding: 10px;
+  opacity: 0.8;
+  border-radius: 8px;
+  text-align: center;
+}
+#img5 {
+  background-image: url(../images/portable.png);
+}
+
+/* pot de fleurs */
+#hotspot6 {
+  top: 825px;
+  left: 3890px;
+  width: 80px;
+  height: 35px;
+  padding: 10px;
+  opacity: 0.8;
+  border-radius: 8px;
+  transform: rotate(-10deg);
+  text-align: center;
+}
+#img6 {
+  background-image: url(../images/fleurs.png);
+}
+
+/* béret */
+#hotspot7 {
+  top: 1705px;
+  left: 700px;
+  width: 150px;
+  height: 80px;
+  padding: 10px;
+  opacity: 0.8;
+  border-radius: 8px;
+  text-align: center;
+}
+#img7 {
+  background-image: url(../images/béret.png);
+}
+
+/* baguette */
+#hotspot8 {
+  top: 1380px;
+  left: 1015px;
+  width: 40px;
+  height: 125px;
+  padding: 20px;
+  opacity: 0.8;
+  border-radius: 8px;
+  text-align: center;
+}
+#img8 {
+  background-image: url(../images/baguette.png);
+}
+
+/* parapluie */
+#hotspot9 {
+  top: 1825px;
+  left: 1370px;
+  width: 75px;
+  height: 480px;
+  padding: 20px;
+  opacity: 0.8;
+  border-radius: 8px;
+  text-align: center;
+}
+#img9 {
+  background-image: url(../images/parapluie.png);
+}
+
+/* masque */
+#hotspot10 {
+  top: 1690px;
+  left: 2470px;
+  width: 80px;
+  height: 60px;
+  padding: 10px;
+  opacity: 0.8;
+  border-radius: 8px;
+  text-align: center;
+}
+#img10 {
+  background-image: url(../images/masque.png);
+}
+
+/* Paramétrages images */
+.menu-item .item-found {
+  height:50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Les nuages */
+#nuages1 { 
+  position: absolute;
+  background-image: url(../images/nuages1.png);
+  background-size: cover;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 2732px;
+  height: 2048px;
+  animation: animNuagesone infinite 18s linear;
+}
+
+@keyframes animNuagesone {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#nuages2 { 
+  position: absolute;
+  background-image: url(../images/nuages2.png);
+  background-size: cover;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 2732px;
+  height: 2048px;
+  animation: animNuagestwo infinite 22s linear;
+}
+
+@keyframes animNuagestwo {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#nuages3 { 
+  position: absolute;
+  background-image: url(../images/nuages3.png);
+  background-size: cover;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 2732px;
+  height: 2048px;
+  animation: animNuagesthree infinite 28s linear;
+}
+
+@keyframes animNuagesthree {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* pub1 */
+#pub1 { 
+  position: absolute;
+  background-image: url(../images/pub1.gif); 
+  top: 1140px;
+  left: 587px;
+  height: 150px;
+  width: 97px;
+  z-index: 999999999999999;
+}
+
+/* pub2 */
+#pub2 { 
+  position: absolute;
+  background-image: url(../images/pub2.gif); 
+  top: 1038px;
+  left: 3720px;
+  height:278px;
+  width: 248px;
+  z-index: 999999999999999;
+}
+
+/* feux1 */
+#feux1 { 
+  position: absolute;
+  background-image: url(../images/feux-1.gif); 
+  top: 1057px;
+  left: 1767px;
+  height: 66px;
+  width: 18px;
+  z-index: 999999999999999;
+}
+
+/* feux1 */
+#feux1 { 
+  position: absolute;
+  background-image: url(../images/feux-1.gif); 
+  top: 1057px;
+  left: 1767px;
+  height: 66px;
+  width: 18px;
+  z-index: 999999999999999;
+}
+
+/* feux1 */
+#feux2 { 
+  position: absolute;
+  background-image: url(../images/feux-2.gif); 
+  top: 1165px;
+  left: 2469px;
+  height: 48px;
+  width: 12px;
+  z-index: 999999999999999;
+}
+
+/* feux1 */
+#feux3 { 
+  position: absolute;
+  background-image: url(../images/feux-2.gif); 
+  top: 1137px;
+  left: 2580px;
+  height: 48px;
+  width: 12px;
+  z-index: 999999999999999;
+}
+
+.hotspot.found {
+  opacity:.5 !important;
+}
+
+.titre {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding:10px 20px;
+  font-size:22px;
+  z-index: 999;
+}
+.logo {
+  display: none;
+}
+
+.count {
+  position:fixed;
+  top:20px;
+  right:325px;
+  background:white;
+  padding:10px 20px;
+  border: 1px solid black;
+  font-size:22px;
+  z-index:10000;
+}
+
+.menu {
+  position:fixed;
+  top:20px;
+  right:20px;
+  font-size: 22px;
+  z-index:10000;  
+}
+
+/* Ligne droite noir horizontale */
+h2 {
+  display: flex;
+  align-items: center;
+}
+
+h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: black;
+}
+
+.menu-info {
+  width: 292px;
+  background:white;
+  padding:10px 20px;  
+  border: 1px solid black;
+  text-align: center;
+  margin-bottom: -1px;
+}
+.menu-info:hover {  
+  cursor:url(../images/cursor-hover.svg), auto;
+}
+.menu-info:active {
+  cursor:url(../images/cursor.svg), auto;
+}
+
+.menu-content {
+  width: 292px;
+  height: auto;
+  background: white;
+  border: 1px solid black;
+  border-top-color: white;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.menu-content-top {
+  display: flex;
+  width: 250px;
+  flex-wrap: wrap;
+}
+
+.menu-content-bottom .item-found {
+  width: 250px;
+  height: auto;  
+  font-size: 14px;
+}
+
+.debut {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.menu-item {
+  width:83px;
+  background:white;
+  padding: 8px 0px;
+}
+
+.menu-item .item-not-found {
+  display:block;
+  font-size: 14px;
+}
+
+.menu-item .item-found {
+  display:none;
+}
+
+.menu-item.found .item-not-found {
+  display:none;
+}
+
+.menu-content-bottom .menu-item {
+  display:none;
+}
+
+.menu-item.found .item-found,
+.menu-item.found {
+  display:block;  
+}
+.menu-content-top .menu-item .item-found:hover {
+  opacity: 0.8;
+  cursor:url(../images/cursor-hover.svg), auto;
+}
+.menu-content-top .menu-item .item-found:active {
+  cursor:url(../images/cursor.svg), auto;
+}
+
+.close {
+  position:absolute;
+  top: -2px;
+  right:-2px;
+  background:black;
+  width:15px;
+  height:15px;
+  pointer-events: none;
+  transform:scale(0);
+  transition:all 300ms ease;
+}
+
+.close.show {
+  transform:scale(1);
+}
+
+.menu-responsive {
+  display: none;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+  /* Menu information */
+  .menu-info {
+    display: none;
+  }
+
+  .menu-content {   
+    border-top-color: black;
+  }
+
+  .menu .menu-responsive {
+    width: 6px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .menu-responsive {
+    background-image: url(../images/information.svg) !important;
+    display: block;
+    margin-left: 230px;
+    background: white;
+    padding: 23px 30px 22px 30px;  
+    border: 1px solid black;
+  }
+  .menu-responsive:hover {  
+    cursor:url(../images/cursor-hover.svg), auto;
+  }
+  .menu-responsive:active {
+    cursor:url(../images/cursor.svg), auto;
+  }  
+
+  /* Conteur */
+  .count {
+    right: 95px;
+  }
+
+  /* Gagner */
+  .gagner {
+    font-size: 14px;
+  }
+
+}
+
